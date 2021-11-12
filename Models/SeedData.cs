@@ -24,7 +24,7 @@ namespace Demo.Models
                     new Employee
                     {
                         EmployeeID = "EMP001",
-                        EmployeeName = ("Dinh Thế Nhân"),
+                        EmployeeName = ("Lê Nhật Giang"),
                         PhoneNumber = "09129899100",
                        
                     },
@@ -32,21 +32,21 @@ namespace Demo.Models
                     new Employee
                     {
                          EmployeeID = "EMP002",
-                        EmployeeName = ("Phạm Văn Anh"),
+                        EmployeeName = ("Lê Đẳng Hai"),
                         PhoneNumber = "09139899100",
                     },
 
                     new Employee    
                     {
                         EmployeeID = "EMP003",
-                        EmployeeName = ("Nguyễn Quang Đức"),
+                        EmployeeName = ("Phùng Thanh Lịch"),
                         PhoneNumber = "09149899100",
                     },
 
                     new Employee    
                     {
                         EmployeeID = "EMP004",
-                        EmployeeName = ("Vũ Văn Lâm"),
+                        EmployeeName = ("Trần Thái Linh Hương"),
                         PhoneNumber = "09159899100",
                     
                     }
