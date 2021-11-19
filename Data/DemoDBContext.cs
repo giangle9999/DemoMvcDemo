@@ -11,6 +11,8 @@ namespace Demo.Data{
         public DemoDBContext (DbContextOptions<DemoDBContext> options)
             : base(options)
         {
+            
+            
         }
 
         public DbSet<Demo.Models.Person> Person { get; set; }
@@ -20,5 +22,11 @@ namespace Demo.Data{
         public DbSet<Demo.Models.Employee> Employees { get; set; }
 
         public DbSet<Demo.Models.Product> Products { get; set; }
+
+        public DbSet<Customer> Customer { get; set; }
+
+        public DbSet<Teacher> Teacher { get; set; }
+
+        
     }
 }

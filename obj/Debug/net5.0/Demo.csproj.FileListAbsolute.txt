@@ -185,3 +185,13 @@ E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Products\Delete.cshtml.g.cs
 E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Products\Details.cshtml.g.cs
 E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Products\Edit.cshtml.g.cs
 E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\People\Create.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\People\Delete.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\People\Details.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\People\Edit.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\People\Index.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Teacher\Create.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Teacher\Delete.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Teacher\Details.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Teacher\Edit.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Teacher\Index.cshtml.g.cs
