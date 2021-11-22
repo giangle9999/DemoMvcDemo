@@ -15669,6 +15669,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Product1\\Delete.cshtml",
+      "TargetPath": "Views\\Product1\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Students\\Details.cshtml",
       "TargetPath": "Views\\Students\\Details.cshtml",
       "FileKind": "mvc"
@@ -15706,6 +15711,11 @@
     {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Employees\\Details.cshtml",
       "TargetPath": "Views\\Employees\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Product1\\Create.cshtml",
+      "TargetPath": "Views\\Product1\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15764,6 +15774,31 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Category\\Details.cshtml",
+      "TargetPath": "Views\\Category\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Product1\\Edit.cshtml",
+      "TargetPath": "Views\\Product1\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Category\\Index.cshtml",
+      "TargetPath": "Views\\Category\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Product1\\Index.cshtml",
+      "TargetPath": "Views\\Product1\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Product1\\Details.cshtml",
+      "TargetPath": "Views\\Product1\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Employees\\Create.cshtml",
       "TargetPath": "Views\\Employees\\Create.cshtml",
       "FileKind": "mvc"
@@ -15789,8 +15824,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Category\\Create.cshtml",
+      "TargetPath": "Views\\Category\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Category\\Delete.cshtml",
+      "TargetPath": "Views\\Category\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Category\\Edit.cshtml",
+      "TargetPath": "Views\\Category\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {

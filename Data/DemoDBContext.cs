@@ -27,6 +27,15 @@ namespace Demo.Data{
 
         public DbSet<Teacher> Teacher { get; set; }
 
+        public DbSet<Student1> Student1 { get; set; }
+        public DbSet<School> Schools { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Product1> Product1 { get; set; }
+
+        
+
+        
+
         
     }
 }

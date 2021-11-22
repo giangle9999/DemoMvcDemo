@@ -195,3 +195,13 @@ E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Teacher\Delete.cshtml.g.cs
 E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Teacher\Details.cshtml.g.cs
 E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Teacher\Edit.cshtml.g.cs
 E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Teacher\Index.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Category\Create.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Category\Details.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Category\Edit.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Product1\Create.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Product1\Delete.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Product1\Details.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Product1\Edit.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Product1\Index.cshtml.g.cs

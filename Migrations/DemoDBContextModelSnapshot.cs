@@ -15,11 +15,29 @@ namespace Demo.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.11");
 
+            modelBuilder.Entity("Demo.Models.Category", b =>
+                {
+                    b.Property<int>("CategoryID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CategoryID");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("Demo.Models.Customer", b =>
                 {
                     b.Property<int>("CustomerID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Fullname")
                         .HasColumnType("TEXT");
@@ -27,6 +45,8 @@ namespace Demo.Migrations
                     b.HasKey("CustomerID");
 
                     b.ToTable("People");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Customer");
                 });
 
             modelBuilder.Entity("Demo.Models.Employee", b =>
@@ -77,6 +97,25 @@ namespace Demo.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Demo.Models.Product1", b =>
+                {
+                    b.Property<int>("Product1ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Product1Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Product1ID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("Product1s");
+                });
+
             modelBuilder.Entity("Demo.Models.Student", b =>
                 {
                     b.Property<string>("StudentID")
@@ -91,6 +130,67 @@ namespace Demo.Migrations
                     b.HasKey("StudentID");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("Demo.Models.Student1", b =>
+                {
+                    b.Property<int>("Student1ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Fullname")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Student1ID");
+
+                    b.ToTable("Student");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Student1");
+                });
+
+            modelBuilder.Entity("Demo.Models.Teacher", b =>
+                {
+                    b.HasBaseType("Demo.Models.Customer");
+
+                    b.Property<int>("TeacherID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("University")
+                        .HasColumnType("TEXT");
+
+                    b.ToTable("People");
+
+                    b.HasDiscriminator().HasValue("Teacher");
+                });
+
+            modelBuilder.Entity("Demo.Models.School", b =>
+                {
+                    b.HasBaseType("Demo.Models.Student1");
+
+                    b.Property<int>("TeacherID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("University")
+                        .HasColumnType("TEXT");
+
+                    b.ToTable("Student");
+
+                    b.HasDiscriminator().HasValue("School");
+                });
+
+            modelBuilder.Entity("Demo.Models.Product1", b =>
+                {
+                    b.HasOne("Demo.Models.Category", "category")
+                        .WithMany()
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("category");
                 });
 #pragma warning restore 612, 618
         }
