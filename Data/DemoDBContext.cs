@@ -31,6 +31,7 @@ namespace Demo.Data{
         public DbSet<School> Schools { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Product1> Product1 { get; set; }
+        public DbSet<Demo123> Demo123 { get; set; }
 
         
 
