@@ -13,6 +13,7 @@ namespace Demo.Controllers
     public class PersonsController : Controller
     {
         private readonly DemoDBContext _context;
+        private IEnumerable<object> pers;
 
         public PersonsController(DemoDBContext context)
         {
@@ -20,10 +21,18 @@ namespace Demo.Controllers
         }
 
         // GET: Persons
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Person.ToListAsync());
-        }
+         public async Task<IActionResult> Index(string searchString)
+{
+    var movies = from m in _context.Person
+                 select m;
+
+    if (!String.IsNullOrEmpty(searchString))
+    {
+        movies = movies.Where(s => s.Title.Contains(searchString));
+    }
+
+    return View(await movies.ToListAsync());
+}
 
         // GET: Persons/Details/5
         public async Task<IActionResult> Details(string id)

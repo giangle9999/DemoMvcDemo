@@ -10,7 +10,6 @@ namespace Demo.Models{
         public string Demo123ID { get; set; }
 
         public string Demo123Name { get; set; }
-        
-        
+        public object Title { get; internal set; }
     }
 }
