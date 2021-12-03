@@ -10,7 +10,9 @@ namespace Demo.Models{
         public string PersonID { get; set; }
 
         public string PersonName { get; set; }
-        public object Title { get; internal set; }
+
+        public string Rating { get; set; }
+        
     }
 }
 //dotnet-aspnet-codegenerator controller -name ProductsController -m Product -dc DemoDBContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -sqlite

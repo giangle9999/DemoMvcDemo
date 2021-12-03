@@ -1,4 +1,4 @@
-@model IEnumerable<Demo.Models.Person>
+@model Demo.Models.PersonGenreViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -11,7 +11,10 @@
 </p>
     <form asp-controller="Persons" asp-action="Index">
     <p>
-        Title: <input type="text" name="SearchString" />
+        <select asp-for="PersonGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+        Title: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
     </p>
 </form>
@@ -19,16 +22,28 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PersonName)
+                @Html.DisplayNameFor(model => model.Persons[0].PersonName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Persons[0].PersonID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Persons[0].Rating)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Persons) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.PersonID)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.PersonName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PersonID">Edit</a> |

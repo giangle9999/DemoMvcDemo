@@ -2,14 +2,16 @@
 using Demo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Demo.Migrations
 {
     [DbContext(typeof(DemoDBContext))]
-    partial class DemoDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211203084533_Create_Table_B")]
+    partial class Create_Table_B
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -71,9 +73,6 @@ namespace Demo.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PersonName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Rating")
                         .HasColumnType("TEXT");
 
                     b.HasKey("PersonID");

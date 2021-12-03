@@ -20,18 +20,34 @@ namespace Demo.Controllers
             _context = context;
         }
 
-        // GET: Persons
-         public async Task<IActionResult> Index(string searchString)
+        // GET: Movies
+public async Task<IActionResult> Index(string movieGenre, string searchString)
 {
-    var movies = from m in _context.Person
+    // Use LINQ to get list of genres.
+    IQueryable<string> genreQuery = from m in _context.Person
+                                    orderby m.PersonID
+                                    select m.PersonName;
+
+    var persons = from m in _context.Person
                  select m;
 
-    if (!String.IsNullOrEmpty(searchString))
+    if (!string.IsNullOrEmpty(searchString))
     {
-        movies = movies.Where(s => s.Title.Contains(searchString));
+        persons = persons.Where(s => s.PersonName.Contains(searchString));
     }
 
-    return View(await movies.ToListAsync());
+    if (!string.IsNullOrEmpty(movieGenre))
+    {
+        persons = persons.Where(x => x.PersonID == movieGenre);
+    }
+
+    var movieGenreVM = new PersonGenreViewModel
+    {
+        Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+        Persons = await persons.ToListAsync()
+    };
+
+    return View(movieGenreVM);
 }
 
         // GET: Persons/Details/5
@@ -63,7 +79,7 @@ namespace Demo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonID,PersonName")] Person person)
+        public async Task<IActionResult> Create([Bind("PersonID,PersonName,Rating")] Person person)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +111,7 @@ namespace Demo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("PersonID,PersonName")] Person person)
+        public async Task<IActionResult> Edit(string id, [Bind("PersonID,PersonName,Rating")] Person person)
         {
             if (id != person.PersonID)
             {
