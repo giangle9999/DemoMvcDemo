@@ -157,6 +157,7 @@ public async Task<IActionResult> Index(string movieGenre, string searchString)
             }
 
             return View(person);
+        
         }
 
         // POST: Persons/Delete/5
